@@ -39,9 +39,10 @@ class Album:
         print(f'Общая длина всех треков {max_time}')
 
     def __str__(self):
-        print(f'Name group: {self.name_album}\nName album: {self.group}\nTracks:')
+        tracks_ = ''
         for track in self.track_list:
-            print(f'        {track.__str__()}')
+            tracks_ += f'\n       {track}'
+        return f'Name group: {self.name_album}\nName album: {self.group}\nTracks:{tracks_}'
 
 
 track1 = Track('"Фантазер"', 3)
